@@ -1,0 +1,47 @@
+/* init-style */
+html,body,div,ul,ol,li,span,h1,h2,h3,h4,h5,h6,p,a,img,b,dl,dt,dd,form,label,legend,u,i,pre,s{ margin:0; padding:0;}
+body{ font:12px/150% Arial, Verdana, "宋体b8b\4f53"; color:#666;}
+ol,ul,li{ list-style:none;}
+a:link,a:visited{ color:#666; text-decoration:none;}
+a:hover{ color:#F75010;}
+.w{ width:1210px; margin:0 auto;}
+.rw{ width:310px;}
+.mb{ margin-bottom:10px;}
+.pt{ padding-top:8px;}
+.fl{ float:left;}
+.fr{ float:right;}
+.clr{ clear:both;}
+.pr{ position:relative;}
+.pa{ position:absolute;}
+.dn{ display:none;}
+.mt{ height:16px; line-height:16px; padding:7px 0; border-bottom:2px solid #AAA;}
+h2{ font-size:14px; font-family:"microsoft yahei"; font-weight:bold; display:inline-block;}
+.tab_arrow{ position:absolute; z-index:1; top:23px; left:0; height:7px; border-bottom:2px solid #F75010; text-align:center; overflow:hidden;}
+.tab_arrow b{ display:inline-block; margin-top:-8px; width:0px; height:0px; border-style:dashed dashed solid dashed; border-width:10px; border-color:transparent transparent #F75010 transparent;}
+.plist{ width:1000px; position:relative; float:left; padding-top:32px; overflow:hidden;}
+.plist .tab_arrow{ width:158px;}
+.plist .smt{ width:158px; position:absolute; top:0; text-align:center; height:16px; line-height:16px; padding:7px 0; border-bottom:2px solid #AAA; cursor:default;}
+.plist .t1{ left:0px;}
+.plist .t2{ left:158px;}
+.plist .t3{ left:316px;}
+.plist .t4{ left:474px;}
+
+.plist .smc{ position:relative;  border-bottom:1px solid #DDD;}
+.plist .smc .cslide{ position:absolute; left:159px; top:0; width:473px; height:180px; overflow:hidden;}
+.plist .smc .cslide .win{ width:473px; overflow:hidden;}
+.plist .smc .cslide .win .content{ width:1892px; overflow:hidden;}
+.plist .smc .cslide .win .content .item{ width:473px; float:left;}
+.plist .smc .cslide .cslide_control{ position:absolute; bottom:0; left:0; z-index:3; width:473px; height:16px; overflow:hidden; text-align:center;}
+.plist .smc .cslide .cslide_control span{ height:5px; width:36px; display:inline-block; margin:5px 0; cursor:default; background-color:#999;}
+.plist .smc .cslide .cslide_control span.curr{ background-color:#7ABD54;}
+.plist .smc ul{ width:1000px;}
+.plist .smc ul li{ width:137px; height:175px; padding:5px 10px 0; float:left;}
+.plist .smc ul li.first{ width:138px; margin-right:473px; border-right:1px solid #F1F1F1;}
+.plist .smc ul li.lf{ width:138px; border-top:1px solid #F1F1F1;}
+.plist .smc ul li.lc{ border-top:1px solid #F1F1F1; border-left:1px solid #F1F1F1;}
+.plist .smc ul li.ll{ border-left:1px solid #F1F1F1;}
+
+.plist .p_img{ text-align:center; padding:5px 0; overflow:hidden;}
+.plist .p_name{ height:3em; margin-bottom:2px; word-break:break-all; word-wrap:break-word; overflow:hidden;}
+.plist .p_price{ font-size:15px; font-family:Verdana; color:#E4393C; overflow:hidden;}
+.plist .p_price span{ font-size:12px;}

@@ -1,0 +1,39 @@
+/* 返回顶部图标样式 */
+.cd-container {
+  width: 90%;
+  max-width: 768px;
+  height:3000px;
+  margin: 2em auto;
+  display:block;
+}
+.cd-container::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.cd-top {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  bottom: 40px;
+  right: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  text-indent: 100%;
+  white-space: nowrap;
+  background: rgba(232, 98, 86, 0.8) url(../img/2.png) no-repeat center 50%;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.cd-top.cd-is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+.cd-top.cd-fade-out {
+  /* 如果用户继续向下滚动,这个按钮的透明度会变得更低 */
+  opacity: .5;
+}
+.no-touch .cd-top:hover {
+  background-color: #e86256;
+  opacity: 1;
+}

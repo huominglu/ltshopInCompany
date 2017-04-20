@@ -1,0 +1,101 @@
+/* CSS Document */
+/* 页面布局 */
+body{
+	margin:0;
+	padding:0;
+	background:#f1f1f1;
+	font:80% Arial, Helvetica, sans-serif; 
+	color:#555;
+	line-height:150%;
+	text-align:left;
+}
+h2{
+	font-size:140%;
+	margin:0 20px;
+	padding-top:3px;
+	line-height:20px;	
+}
+a{
+	text-decoration:none;
+	color:#11b6b6;
+}
+a:hover{
+	text-decoration:none;
+	color:#999;
+}
+#container{
+	margin:0 auto;
+	width:1050px;
+}
+#content{
+	margin:0 20px;
+}
+#page,#uboxstyle{
+	font-style:inherit;
+	font-size:125%;
+}
+#uboxstyle{
+	float:left;
+}
+#word1,#main1,#main2{
+	float:left;
+	padding-left:10px;
+	padding-bottom:5px;
+}
+#word{
+	float:left;
+	color:#11b6b6;
+	padding-left:10px;
+}
+/* 表格样式 */
+table, td{
+	font:100% Arial, Helvetica, sans-serif; 
+}
+table{
+	width:100%;
+	border-collapse:collapse;
+	margin:1em 0;
+}
+th, td{
+	text-align:left;
+	padding:.5em;
+	border:1px solid #fff;
+}
+th{
+	background:#11b6b6 url(tr_back.gif) repeat-x;
+	color:#fff;
+}
+td{
+	background:#e5f1f4;
+}
+tr.even td{
+	background:#e5f1f4;
+}
+tr.odd td{
+	background:#f8fbfc;
+}
+th.over, tr.even th.over, tr.odd th.over{
+	background:#4a98af;
+}
+th.down, tr.even th.down, tr.odd th.down{
+	background:#bce774;
+}
+td.over, tr.even td.over, tr.odd td.over{
+	background:#ecfbd4;
+}
+td.down, tr.even td.down, tr.odd td.down{
+	background:#bce774;color:#fff;
+}
+td.selected, tr.even td.selected, tr.odd td.selected{
+	background:#bce774;color:#555;
+}
+/* 输入框样式 */
+* { 
+	margin:0; padding:0; 
+}
+input {
+	padding: 5px;
+	padding-bottom:2px;
+	border: 3px solid #e0e0e0;
+	border-radius: 20px;
+}

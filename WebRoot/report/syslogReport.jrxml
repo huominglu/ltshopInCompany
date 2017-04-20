@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="FortSystemLog" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="30" rightMargin="30" topMargin="20" bottomMargin="20" uuid="e1aa2515-fde3-47f3-b6ce-f03abda4b0b3">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1" uuid="8889f543-a11f-4017-8e1c-4a875c830560"/>
+	<queryString>
+		<![CDATA[select * from t_order order by id DESC]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer"/>
+	<field name="username" class="java.lang.String"/>
+	<field name="realname" class="java.lang.String"/>
+	<field name="address" class="java.lang.String"/>
+	<field name="postcode" class="java.lang.String"/>
+	<field name="mobil" class="java.lang.String"/>
+	<field name="orderdate" class="java.util.Date"/>
+	<field name="orderStaus.ordertypename" class="java.lang.String"/>
+	<variable name="colnumSum" class="java.lang.Integer" incrementType="Report">
+		<variableExpression><![CDATA[new java.lang.Integer($V{COLUMN_NUMBER}+$V{colnumSum})]]></variableExpression>
+		<initialValueExpression><![CDATA[new java.lang.Integer(0)]]></initialValueExpression>
+	</variable>
+	<title>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="196" y="0" width="177" height="20" uuid="747beb78-2267-42d6-9485-7b5dcbab6744"/>
+				<textElement>
+					<font fontName="SansSerif" size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[订单列表]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="23">
+			<staticText>
+				<reportElement mode="Opaque" x="1" y="0" width="41" height="20" forecolor="#FFFFFF" backcolor="#006699" uuid="48ba3a03-88b2-43f3-b87f-b4e568eec7f7"/>
+				<textElement>
+					<font isBold="true" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[编号]]></text>
+			</staticText>
+			
+			<staticText>
+				<reportElement mode="Opaque" x="42" y="0" width="59" height="20" forecolor="#FFFFFF" backcolor="#006699" uuid="87ca2205-75f5-4640-8df1-b65109a73141"/>
+				<textElement>
+					<font isBold="true" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[用户登录名]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="101" y="0" width="74" height="20" forecolor="#FFFFFF" backcolor="#006699" uuid="a6add218-f85c-4841-a911-e3828fc7b02e"/>
+				<textElement>
+					<font isBold="true" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[用户真实姓名]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="175" y="0" width="79" height="20" forecolor="#FFFFFF" backcolor="#006699" uuid="be35153e-a7d0-417d-93aa-7d61c5e00ead"/>
+				<textElement>
+					<font isBold="true" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[用户地址]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="254" y="0" width="67" height="20" forecolor="#FFFFFF" backcolor="#006699" uuid="b0c3c78a-294f-4045-8fe3-34b30910624b"/>
+				<textElement>
+					<font isBold="true" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[用户邮编]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="321" y="0" width="52" height="20" forecolor="#FFFFFF" backcolor="#006699" uuid="efbed18a-a68d-4902-9b73-8c7df1c72b70"/>
+				<textElement>
+					<font isBold="true" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[用户移动电话]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="373" y="0" width="117" height="20" forecolor="#FFFFFF" backcolor="#006699" uuid="1ea2fca5-ebcb-41ea-b171-00ae36bf6cd1"/>
+				<textElement>
+					<font isBold="true" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[订单日期]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="373" y="0" width="117" height="20" forecolor="#FFFFFF" backcolor="#006699" uuid="1ea2fca5-ebcb-41ea-b171-00ae36bf6cd1"/>
+				<textElement>
+					<font isBold="true" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[订单状态]]></text>
+			</staticText>
+			
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+				<reportElement key="textField" stretchType="RelativeToTallestObject" x="0" y="0" width="43" height="18" uuid="bd972e3a-e318-4b7f-973a-f1af9a13fe3c"/>
+				<textElement verticalAlignment="Top" markup="none">
+					<font fontName="SansSerif" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{colnumSum}]]></textFieldExpression>
+			</textField>
+			
+			<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+				<reportElement key="textField" stretchType="RelativeToTallestObject" x="43" y="0" width="58" height="18" uuid="ceaf533f-01a3-4e12-bc26-4bce8ad83348"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="SansSerif" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{realname}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+				<reportElement key="textField" stretchType="RelativeToTallestObject" x="101" y="0" width="74" height="18" uuid="87acc2a3-5064-48be-b263-f534955a196b"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="SansSerif" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{username}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+				<reportElement key="textField" stretchType="RelativeToTallestObject" x="175" y="0" width="79" height="18" uuid="7c248930-b5a2-4edd-bb18-7d0eef592221"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="SansSerif" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="false">
+				<reportElement key="textField" stretchType="RelativeToTallestObject" x="254" y="0" width="67" height="18" uuid="c4c940ca-eda0-4438-b56f-a98c5cb4298c"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="SansSerif" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{postcode}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="false">
+				<reportElement key="textField" stretchType="RelativeToTallestObject" x="321" y="0" width="52" height="18" uuid="ff3a97fc-d1f1-48a2-a7e8-6a668ad3655f"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="SansSerif" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mobil}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+				<reportElement key="textField" stretchType="RelativeToTallestObject" x="373" y="0" width="117" height="18" uuid="61b12582-4efa-4015-a3a7-b1f6d0766256"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="SansSerif" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{orderdate}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+				<reportElement key="textField" stretchType="RelativeToTallestObject" x="373" y="0" width="117" height="18" uuid="61b12582-4efa-4015-a3a7-b1f6d0766256"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="SansSerif" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{orderStaus.ordertypename}]]></textFieldExpression>
+			</textField>
+			
+			<line>
+				<reportElement positionType="Float" x="0" y="19" width="535" height="1" forecolor="#999999" uuid="0bf00586-e4e7-4c03-871b-c6aa28b3a16b"/>
+			</line>
+		</band>
+	</detail>
+</jasperReport>
