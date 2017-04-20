@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="jmshopteam4"
+  id="myeclipse.1469148606211"
+  context-root="/jmshopteam4"
+  j2ee-spec="6.0"
+  archive="jmshopteam4.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
